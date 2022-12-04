@@ -23,3 +23,10 @@ let url = URL(string: "https://translate.googleapis.com/translate_a/single?clien
                             }
                         }
             
+
+
+
+                                name: json["name"].rawValue as! String,
+                                temp: Int(json["main"]["temp"].rawValue as! Double), temp_min: Int(json["main"]["temp_min"].rawValue as! Double),
+                                temp_max: Int(json["main"]["temp_max"].rawValue as! Double),
+                                weather: "\(json["weather"].array![0]["main"])",
